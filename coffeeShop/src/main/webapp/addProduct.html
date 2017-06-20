@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/admin/products" method="post">
+		<table>
+			<tr>
+				<td>Product Name:</td>
+				<td><input type="text" name="productName" /> </td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" name="description" /> </td>
+			</tr>
+			<tr>
+				<td>Price:</td>
+				<td><input type="text" name="price" /> </td>
+			</tr>
+			<tr>
+				<td>Product Type:</td>
+				<td><select name="productType" class="form-control">
+					<option value="BREAKFAST" selected>Breakfast</option>
+					<option value="LUNCH">Lunch</option>
+					<option value="DINNER">Dinner</option>
+				</select> </td>
+			</tr>
+		</table>
+		<input type="submit"/>
+	</form>
+
+</body>
+</html>
