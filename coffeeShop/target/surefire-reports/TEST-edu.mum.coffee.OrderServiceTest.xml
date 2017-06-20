@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.mum.coffee.OrderServiceTest" time="28.954" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="edu.mum.coffee.OrderServiceTest" time="21.469" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
     <property name="java.vm.version" value="25.121-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\diego\spring\coffeeShop"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\diego\git\WAA_Spring\coffeeShop"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\diego\spring\coffeeShop"/>
+    <property name="user.dir" value="C:\Users\diego\git\WAA_Spring\coffeeShop"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\diego\spring\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf9188717376930657923.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\diego\spring\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7513172621501894220.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\diego\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -52,7 +52,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\diego\spring\coffeeShop\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\diego\git\WAA_Spring\coffeeShop\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,10 +60,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testFindByPerson" classname="edu.mum.coffee.OrderServiceTest" time="5.059"/>
-  <testcase name="testFindByProduct" classname="edu.mum.coffee.OrderServiceTest" time="5.073"/>
-  <testcase name="testFindAll" classname="edu.mum.coffee.OrderServiceTest" time="3.626"/>
-  <testcase name="testSave" classname="edu.mum.coffee.OrderServiceTest" time="4.842"/>
-  <testcase name="testFindByDate" classname="edu.mum.coffee.OrderServiceTest" time="4.943"/>
-  <testcase name="testFindById" classname="edu.mum.coffee.OrderServiceTest" time="5.411"/>
+  <testcase name="testFindByPerson" classname="edu.mum.coffee.OrderServiceTest" time="4.32"/>
+  <testcase name="testFindByProduct" classname="edu.mum.coffee.OrderServiceTest" time="3.497"/>
+  <testcase name="testFindAll" classname="edu.mum.coffee.OrderServiceTest" time="3.334"/>
+  <testcase name="testSave" classname="edu.mum.coffee.OrderServiceTest" time="3.281"/>
+  <testcase name="testFindByDate" classname="edu.mum.coffee.OrderServiceTest" time="3.719"/>
+  <testcase name="testFindById" classname="edu.mum.coffee.OrderServiceTest" time="3.318"/>
 </testsuite>
