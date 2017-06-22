@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +20,15 @@
       <div class="container">    
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-4">
-          <ul class="nav navbar-nav navbar-left">
+         <ul class="nav navbar-nav navbar-left">
+          <sec:authorize access="hasRole('ROLE_ADMIN')">
             <li><a href="/admin/products" class="active">Products</a></li>
             <li><a href="/admin/orders">Orders</a></li>
             <li><a href="/admin/persons">Users</a></li>
+            </sec:authorize>
+            <sec:authorize access="hasRole('ROLE_USER')">
+          			<li><a href="/user/order">Order</a></li>
+           </sec:authorize>
           </ul>
            <ul class="nav navbar-nav navbar-right">
             <li><a href='<c:url value="/logout"/>' class="active">Logout</a></li>

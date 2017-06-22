@@ -2,6 +2,8 @@ package edu.mum.coffee.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -47,8 +49,10 @@ public class HomeController {
 	}
 	
 	@PostMapping("/register/persons")
-	public String addPerson(Person person){
+	public String addPerson(Model model,Person person, HttpServletRequest request){
 		personService.savePerson(person);
+		List<Person> p=personService.getPersonByEmail(person.getEmail());
+		request.getSession().setAttribute("user",p.get(0));
 		return "home";
 	}
 	
