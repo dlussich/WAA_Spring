@@ -26,7 +26,7 @@
             <li><a href="/admin/persons">Users</a></li>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_USER')">
-          			<li><a href="/home/order">Order</a></li>
+          			<li><a href="/user/order">Order</a></li>
            </sec:authorize>
           </ul>
            <ul class="nav navbar-nav navbar-right">
@@ -36,7 +36,7 @@
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
     <div class="col-md-8 col-md-offset-2">
-	<h1>Welcome!</h1>
+	<h1 class="text-center">Welcome, ${user.firstName}!</h1>
 
  </div>
  </div>

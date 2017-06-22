@@ -1,11 +1,15 @@
 package edu.mum.coffee.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.service.PersonService;
@@ -22,7 +26,11 @@ public class HomeController {
 	}
 	
 	@GetMapping("/home")
-	public String home() {
+	public String home(Model model) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String email = authentication.getName();
+		List<Person> person=personService.getPersonByEmail(email);
+		model.addAttribute("user",person.get(0));
 		return "home";
 	}
 	
@@ -32,7 +40,7 @@ public class HomeController {
 		    model.addAttribute("error", "Your username and password is invalid.");*/
 		return "login";
 	}
-
+	
 	@GetMapping("/register")
 	public String register() {
 		return "addPerson";
@@ -41,7 +49,7 @@ public class HomeController {
 	@PostMapping("/register/persons")
 	public String addPerson(Person person){
 		personService.savePerson(person);
-		return "redirect:/user/order";
+		return "home";
 	}
 	
 	@GetMapping({"/secure"})

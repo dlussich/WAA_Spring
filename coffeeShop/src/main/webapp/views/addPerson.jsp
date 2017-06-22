@@ -70,6 +70,7 @@
 				<td><input type="text"  name="address.zipcode"  class="form-control"/></td>
 			</tr>
 		</table>
+		<input type="hidden" name="enable" value="1"/>
 		<input type="submit"  class="btn btn-primary"/>
 	</form>
  </div>
