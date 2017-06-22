@@ -1,6 +1,5 @@
 package edu.mum.coffee.controller;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +14,8 @@ import edu.mum.coffee.domain.Order;
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.domain.Product;
 import edu.mum.coffee.service.OrderService;
+import edu.mum.coffee.service.PersonService;
+import edu.mum.coffee.service.ProductService;
 
 @Controller
 @RequestMapping("/admin")
@@ -31,7 +32,7 @@ public class ManagerController {
 	@GetMapping(value="/orders")
 	public String getOrders(Model model){
 		 model.addAttribute("orders",orderService.findAll());
-		 return "orders";
+		 return "orderList";
 	}
 	
 	@GetMapping(value="/orders/product/{id}")
@@ -39,12 +40,4 @@ public class ManagerController {
 		return orderService.findByProduct(product);
 	}
 	
-	public List<Order> getOrdersByPerson(Person person) {
-		return orderService.findByPerson(person);
-	}
-
-	public List<Order> getOrdersByDate(Date minDate, Date maxDate) {
-		return orderService.findByDate(minDate, maxDate);
-	}
-
 }

@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Persons List</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <link rel="stylesheet" href="${contextPath}/assets/styles.css"/>
 </head>
 <body>
-	 <div class="clearfix"></div>
+  <div class="clearfix"></div>
  <div class="container-fluid">
  <!-- Second navbar for profile settings -->
     <nav id="menu" class="navbar navbar-inverse">
@@ -30,28 +30,33 @@
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
     <div class="col-md-8 col-md-offset-2">
-	<h1>Persons List</h1>
+	<h1>Products</h1>
 	<table class="table table-striped">
-	<thead>
 	 <tr>
-		<th><b>  First Name </b></th>
-		<th><b>  Last Name  </b></th>
-		<th><b>  Email  </b></th>
-		<th><b>  Phone  </b></th>
-	 </tr>
-	 </thead>
-	<c:forEach var="person" items="${persons}">
-	<tbody>
-	<tr>
-		<td>${person.firstName}</td>
-		<td>${person.lastName}</td>
-		<td>${person.email}</td>
-		<td>${person.phone}</td>
+		<th><b>Product Name</b></th>
+		<th><b>Type</b></th>
+		<th><b>Description</b></th>
+		<th><b>Price</b></th>
+		<th><b>Actions</b></th>
+		<th></th>
 	</tr>
-	</tbody>
+	<c:forEach var="prod" items="${products}">
+	<tr>
+		<td>${prod.productName}</td>
+		<td>${prod.productType}</td>
+		<td>${prod.description}</td>
+		<td>${prod.price}</td>
+		<td><form action="/user/order/${prod.id}/${quantity}" method="get"><label>Quantity:</label><input type="text" name="${quantity}" class="form-control"/><input type="submit" value="Add to Order" class="btn btn-primary"/></form></td>
+		
+	</tr>
 	</c:forEach>
 	</table>	
     </div>
+    <div class="col-md-8 col-md-offset-2">
+    <form action="/user/order" method="get" class="text-center"><input type="submit" value="Add new Product" class="btn-lg btn-primary btn-block"/></form>
+    </div>
  </div>
+ 
+   
 </body>
 </html>

@@ -20,7 +20,18 @@ public class Person {
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	private String phone;
+	private String password;
 	private boolean enable;
+	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 	public long getId() {
 		return id;

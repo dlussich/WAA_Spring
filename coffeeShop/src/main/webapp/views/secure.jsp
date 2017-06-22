@@ -9,6 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>You are in!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body><h1>You made it!</h1>
 <a href="<c:url value="/logout" />"> Now logout </a>

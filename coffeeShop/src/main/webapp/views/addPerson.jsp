@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add new Product</title>
+<title>Register</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <link rel="stylesheet" href="${contextPath}/assets/styles.css"/>
 </head>
 <body>
-  <div class="clearfix"></div>
+ <div class="clearfix"></div>
  <div class="container-fluid">
  <!-- Second navbar for profile settings -->
     <nav id="menu" class="navbar navbar-inverse">
@@ -30,33 +30,49 @@
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
     <div class="col-md-8 col-md-offset-2">
-	<h1>Add Product</h1>
-	<form action="/admin/products" method="post" class="form-horizontal">
-		<table class="table table-striped">
+	<h1>Register</h1>
+   <form action="/register/persons" method="post" class="form-vertical">
+		<table class="table">
 			<tr>
-				<td><label>Product Name: </label></td>
-				<td><input type="text" name="productName"  class="form-control"/> </td>
+				<td><label>First Name:</label></td>
+				<td><input type="text"  name="firstName"  class="form-control" /></td>
 			</tr>
 			<tr>
-				<td><label>Product Type: </label></td>
-				<td><select name="productType"  class="form-control">
-					<option value="BREAKFAST" selected>Breakfast</option>
-					<option value="LUNCH">Lunch</option>
-					<option value="DINNER">Dinner</option>
-				</select> </td>
+				<td><label>Last Name:</label></td>
+				<td><input type="text" name="lastName"  class="form-control"/></td>
 			</tr>
 			<tr>
-				<td><label>Description: </label></td>
-				<td><input type="text" name="description"  class="form-control"/> </td>
+				<td><label>Email:</label></td>
+				<td><input type="email" name="email"  class="form-control"/></td>
 			</tr>
 			<tr>
-				<td><label>Price: </label></td>
-				<td><input type="text" name="price"  class="form-control"/> </td>
+				<td><label>Password:</label></td>
+				<td><input type="password" name="password"  class="form-control"/></td>
+			</tr>
+			<tr>
+				<td><label>Phone:</label></td>
+				<td><input type="text" name="phone"  class="form-control"/></td>
+			</tr>
+			<tr>
+				<td><label>City:</label></td>
+				<td><input type="text"  name="address.city"  class="form-control"/></td>
+			</tr>
+			<tr>
+				<td><label>Country:</label></td>
+				<td><input type="text" name="address.country"  class="form-control"/></td>
+			</tr>
+			<tr>
+				<td><label>State:</label></td>
+				<td><input type="text" name="address.state"  class="form-control"/></td>
+			</tr>
+			<tr>
+				<td><label>Zipcode:</label></td>
+				<td><input type="text"  name="address.zipcode"  class="form-control"/></td>
 			</tr>
 		</table>
 		<input type="submit"  class="btn btn-primary"/>
 	</form>
  </div>
-</div>
+ </div>
 </body>
 </html>

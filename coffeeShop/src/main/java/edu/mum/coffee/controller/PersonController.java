@@ -4,30 +4,31 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.service.PersonService;
 
 @Controller
+@RequestMapping("/admin")
 public class PersonController {
 
 	@Autowired
 	public PersonService personService;
 	
-	public Person savePerson(Person person) {
-		return personService.savePerson(person);
+	@GetMapping("/persons")
+	public String getPersons(Model model) {
+		model.addAttribute("persons", personService.findAll());
+		return "personList";
 	}
-
-	public List<Person> getPersonByEmail(String email) {
-		return personService.getPersonByEmail(email);
-	}
-
-	public Person getPerson(Long id) {
-		return personService.getPerson(id);
-	}
-
-	public void removePerson(Person person) {
-		personService.removePerson(person);
+	
+	@PostMapping("/persons")
+	public String addPerson(Person person){
+		personService.savePerson(person);
+		return "redirect:/admin/persons";
 	}
 
 }
